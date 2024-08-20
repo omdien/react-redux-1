@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Reebok Aztrex Men's Leisure",
+      "price": "500000"
+    },
+    {
+      "id": "2",
+      "title": "Under Armour",
+      "price": "400000"
+    },
+    {
+      "id": "bea7",
+      "title": "Word Division",
+      "price": "350000"
+    },
+    {
+      "id": "8411",
+      "title": "National Standard",
+      "price": "250000"
+    },
+    {
+      "id": "cb1e",
+      "title": "Vans Authentic",
+      "price": "500000"
+    },
+    {
+      "id": "d71c",
+      "title": "New Balance",
+      "price": "300000"
+    }
+  ]
+}
