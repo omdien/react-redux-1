@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { MdOutlineDashboard } from "react-icons/md";
-// import { RiSettings4Line } from "react-icons/ri";
-// import { TbReportAnalytics } from "react-icons/tb";
 import { AiOutlineUser, AiOutlineHeart, AiOutlineLogout } from "react-icons/ai";
 import { FiMessageSquare, FiFolder, FiShoppingCart } from "react-icons/fi";
 import { SiMaterialformkdocs } from "react-icons/si";
@@ -10,49 +8,45 @@ import { TbCategory } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { update } from "../features/CloseOpenSlice";
 
 const Sidebar = () => {
+  const { buka } = useSelector((state) => state.closeOpen); //destructuring
   const menus = [
     { name: "Dashboard", link: "/", icon: MdOutlineDashboard },
-    // { name: "User", link: "/users", icon: AiOutlineUser },
-    // { name: "messages", link: "/", icon: FiMessageSquare },
-    // { name: "analytics", link: "/", icon: TbReportAnalytics, margin: true },
-    // { name: "Kategori", link: "/barangs", icon: TbCategory },
     { name: "Barang", link: "/products", icon: SiMaterialformkdocs },
-    // { name: "Saved", link: "/", icon: AiOutlineHeart, margin: true },
-    // { name: "Setting", link: "/", icon: RiSettings4Line },
   ];
-  const [open, setOpen] = useState(true);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  // const { user } = useSelector((state) => state.auth);
-  // const logout = () => {
-  //     dispatch(LogOut());
-  //     dispatch(reset());
-  //     navigate("/");
-  // };
+  const [open, setOpen] = useState(buka);
+
+  const bukaTutup = (bstat) => {
+    setOpen(bstat);
+    dispatch(update({ buka: !open }));
+  };
+
   return (
     <div
       className={`bg-orange-400 min-h-screen ${
         open ? "w-72" : "w-16"
       } duration-500 text-gray-100 px-4`}
     >
-      <div className="py-3 flex justify-between">
-        <h1
+      <div className="flex py-3">
+        {/* <h1
           style={{ transitionDelay: `${3}00ms` }}
           className={`whitespace-pre duration-500 ${
             !open && "opacity-0 translate-x-28 overflow-hidden"
           } font-bold ps-2 `}
         >
           REACT+REDUX
-        </h1>
+        </h1> */}
         <HiMenuAlt3
           size={26}
           className="cursor-pointer"
-          onClick={() => setOpen(!open)}
+          onClick={() => bukaTutup(!open)}
         />
       </div>
-      <div className="mt-4 flex flex-col gap-4 relative">
+      <div className="relative flex flex-col gap-4 mt-4">
         {menus.map((menu, index) => (
           <Link
             to={menu.link}

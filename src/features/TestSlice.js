@@ -1,10 +1,10 @@
-import { createSlice, createAsyncThunk, createEntityAdapter } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
 const TestSlice = createSlice({
     name: 'test',
     initialState: {
         title: "Barang Sangat Mahal",
-        price: "Rp. 3.500.000"
+        price: "Rp. 3.500.000",
     },
     reducers: {
         update: (state, action) => {

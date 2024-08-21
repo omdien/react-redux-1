@@ -8,17 +8,17 @@ const ShowTest = () => {
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap justify-center">
           <div className="p-4">
-            <div className="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
-              <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+            <div className="relative h-full px-8 pt-16 pb-24 overflow-hidden text-center bg-gray-100 bg-opacity-75 rounded-lg">
+              <h2 className="mb-1 text-xs font-medium tracking-widest text-gray-400 title-font">
                 NAMA BARANG
               </h2>
-              <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
+              <h1 className="mb-3 text-xl font-medium text-gray-900 title-font sm:text-2xl">
                 {title}
               </h1>
-              <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1 mt-10">
+              <h2 className="mt-10 mb-1 text-xs font-medium tracking-widest text-gray-400 title-font">
                 HARGA BARANG
               </h2>
-              <h1 className="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">
+              <h1 className="mb-3 text-xl font-medium text-gray-900 title-font sm:text-2xl">
                 {price}
               </h1>
             </div>

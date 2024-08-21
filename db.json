@@ -29,6 +29,21 @@
       "id": "d71c",
       "title": "New Balance",
       "price": "300000"
+    },
+    {
+      "id": "d4eb",
+      "title": "Adidas",
+      "price": "600000"
+    },
+    {
+      "id": "4b38",
+      "title": "Baran 9",
+      "price": "500000"
+    },
+    {
+      "id": "5ef0",
+      "title": "barang 10",
+      "price": "450000"
     }
   ]
 }
